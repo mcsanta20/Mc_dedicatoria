@@ -153,6 +153,36 @@ body.all-flowers-discovered .flower-hint {
   opacity: 0;
 }
 
+
+@media only screen and (max-width: 600px) {
+  .titulo {
+    top: clamp(14vh, 17vh, 20vh);
+    top: clamp(14dvh, 17dvh, 20dvh);
+    left: 50%;
+    width: min(90vw, 520px);
+    margin-bottom: 0;
+
+    transform: translateX(-50%);
+    font-size: clamp(18px, 5vw, 26px);
+    line-height: 1.35;
+    letter-spacing: clamp(1px, 0.8vw, 3px);
+  }
+
+  .personal-name {
+    margin-bottom: 2px;
+    font-size: 0.72em;
+    letter-spacing: clamp(1px, 0.7vw, 2px);
+  }
+
+  .flower-hint {
+    top: clamp(8vh, 10vh, 12vh);
+    top: clamp(8dvh, 10dvh, 12dvh);
+    width: 88vw;
+    font-size: clamp(13px, 3.6vw, 16px);
+    letter-spacing: 1.5px;
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
