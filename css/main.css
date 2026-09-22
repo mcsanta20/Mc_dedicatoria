@@ -120,6 +120,39 @@ body {
     0 0 35px rgba(255, 190, 20, 0.18);
 }
 
+.flower-hint {
+  position: absolute;
+  top: 10vh;
+  z-index: 20;
+
+  color: rgba(255, 240, 170, 0.72);
+  font-family: "Arial Narrow", Arial, sans-serif;
+  font-size: clamp(14px, 2vw, 18px);
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(255, 214, 70, 0.45);
+
+  pointer-events: none;
+  animation: hintFadeIn 2s ease-in-out 1.5s both;
+  transition: opacity 1s ease;
+}
+
+@keyframes hintFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body.all-flowers-discovered .flower-hint {
+  opacity: 0;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
